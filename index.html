@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<head>
-    <title>
-        Redirecting...
-    </title>
-</head>
-<body>
-    <p>Redirecting you to the store...</p>
-    <script>
-        var playStoreUrl = "http://www.play.google.com/",
-    appStoreUrl  = "http://www.itunes.com/myapp",
-    platform     = navigator.platform;
+<p>Redirecting you to the store...</p>
+<script type="text/javascript">
+//     platform     = navigator.platform;
 
-if (/mac/i.test(platform))
-    $("#redirect").attr("href", appStoreUrl);
-else if (/linux/i.test(platform))
-    $("#redirect").attr("href", playStoreUrl);
-else
-    // Handle the case where the OS is neither MacOS nor Linux
-    $("#redirect").attr("href", playStoreUrl);
-    </script>
-</body>
+// if (/mac/i.test(platform))
+//     location.replace("https://bit.ly/rumblejunglegame");
+// else if (/linux/i.test(platform))
+//     location.replace("https://bit.ly/rumblejunglegame");
+// else
+//     location.replace("https://bit.ly/rumblejunglegame");
+
+    if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+    location.replace("https://bit.ly/rumblejunglegame");
+  }
+  else if (navigator.userAgent.match(/Android/i)) {
+    location.replace("https://bit.ly/rumblejunglegame");
+  }
+  else{
+    location.replace("https://bit.ly/rumblejunglegame");
+  }
+
+</script>
