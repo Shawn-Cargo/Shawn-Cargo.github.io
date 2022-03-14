@@ -5,5 +5,18 @@
     </title>
 </head>
 <body>
-    <p>Hello!</p>
+    <p>Redirecting you to the store...</p>
+    <script>
+        var playStoreUrl = "http://www.play.google.com/",
+    appStoreUrl  = "http://www.itunes.com/myapp",
+    platform     = navigator.platform;
+
+if (/mac/i.test(platform))
+    $("#redirect").attr("href", appStoreUrl);
+else if (/linux/i.test(platform))
+    $("#redirect").attr("href", playStoreUrl);
+else
+    // Handle the case where the OS is neither MacOS nor Linux
+    $("#redirect").attr("href", playStoreUrl);
+    </script>
 </body>
